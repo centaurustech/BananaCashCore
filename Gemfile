@@ -1,10 +1,14 @@
 source 'https://rubygems.org'
-
-
+ruby '2.1.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3',	group: :development
+
+gem 'pg', group: :production
+gem 'rails_12factor', group: :production
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -26,15 +30,27 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+group :development, :test do
+	gem 'rspec-rails', '~> 3.1.0'
+	gem 'factory_girl_rails', '~> 4.4.1'
+	gem 'jasmine'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
+group :test do
+	gem 'faker', '~> 1.4.3'
+	gem 'capybara', '~> 2.4.3'
+	gem 'database_cleaner', '~> 1.3.0'
+	gem 'launchy', '~> 2.4.2'
+	gem 'selenium-webdriver', '~> 2.43.0'
+	gem 'shoulda-matchers', require: false
+end
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+# Para templates
+gem 'haml-rails'
+gem 'html2haml'
+gem 'simple_form'
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
+# Para login y creacion de usuarios
+gem 'devise'
+gem 'cancan'
+gem 'rolify'
