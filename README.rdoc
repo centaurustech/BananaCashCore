@@ -1,28 +1,8 @@
-== README
+| Header Name  |  Description |  Example | 
+|---|---|---|
+|  Accept | Content-Types that are acceptable for the response  |  Accept: text/plain | 
+|  Authorization | Authentication credentials for HTTP authentication  | Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==  |
+|  Content-Type |  The MIME type of the body of the request (used with POST and PUT requests) | Content-Type: application/x-www-form-urlencoded  | 
+|  Origin |  Initiates a request for cross-origin resource sharing (asks server for an ‘Access-Control-Allow-Origin’ response header) . | Origin: http://www.example-social-network.com  | 
+|  User-Agent|  The user agent string of the user agent | User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:12.0) Gecko/20100101 Firefox/21.0  | 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
