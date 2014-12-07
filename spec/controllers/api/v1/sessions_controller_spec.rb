@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-describe Api::V1::SessionsController do
-
+describe Api::V1::SessionsController, :type => :controller do
 	describe "POST #create" do
 		before(:each) do
 			@user = FactoryGirl.create :user
@@ -36,11 +35,12 @@ describe Api::V1::SessionsController do
 	end
 
   describe "DELETE #destroy" do
-
+  	
     before(:each) do
       @user = FactoryGirl.create :user
-      sign_in @user, store: false
-      delete :destroy
+      #sign_in @user, { store: false }
+      sign_in @user
+      delete :destroy, id: @user.id
     end
 
     it { should respond_with 204 }
