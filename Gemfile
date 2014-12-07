@@ -48,7 +48,7 @@ group :test do
 	gem 'launchy', '~> 2.4.2'
 	#will let us test JavaScript-based browser interactions with Capybara.
 	gem 'selenium-webdriver', '~> 2.43.0'
-	gem 'shoulda-matchers', require: false
+	gem "shoulda-matchers"
 end
 
 # Para templates
