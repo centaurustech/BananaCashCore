@@ -5,24 +5,24 @@ module Request
 		end
 	end
 
-	# module HeadersHelpers
-	# 	def api_header(version=1)
-	# 		request.headers['Accept'] = "application/vnd.creositios.v#{version}"
-	# 	end
+	module HeadersHelpers
+		def api_header(version=1)
+			request.headers['Accept'] = "application/vnd.bananacash.v#{version}"
+		end
 
-	# 	def api_response_format(format = Mime::JSON)
-	# 		request.headers['Accept'] = "#{request.headers['Accept']},#{format}"
-	# 		request.headers['Content-Type'] = format.to_s
-	# 	end
+		def api_response_format(format = Mime::JSON)
+			request.headers['Accept'] = "#{request.headers['Accept']},#{format}"
+			request.headers['Content-Type'] = format.to_s
+		end
 
-	# 	def include_default_accept_headers
-	# 		api_header
-	# 		api_response_format
-	# 	end
+		def include_default_accept_headers
+			api_header
+			api_response_format
+		end
 
-	# 	def api_authorization_header(token)
-	# 		request.headers['Authorization'] = token
-	# 	end
-	# end
+		# def api_authorization_header(token)
+		# 	request.headers['Authorization'] = token
+		# end
+	end
 	
 end
