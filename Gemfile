@@ -32,6 +32,7 @@ gem 'spring',        group: :development
 group :development, :test do
 	#includes RSpec itself in a wrapper to add some extra Rails specific features
 	gem 'rspec-rails', '~> 3.1.0'
+	gem 'rspec-mocks'
 	#replaces Rails default fixtures for feeding test data to the test suite with much more preferable factories
 	gem 'factory_girl_rails', '~> 4.4.1'
 	gem 'jasmine'
