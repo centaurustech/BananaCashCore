@@ -10,14 +10,14 @@ module Authenticable
   end
 
 
-  private
-	  def request
-	  	request
-	  end
+  # private
+	 #  def request
+	 #  	request
+	 #  end
 
-	  def response
-	  	response
-	  end
+	 #  def response
+	 #  	request
+	 #  end
 
 end
 
